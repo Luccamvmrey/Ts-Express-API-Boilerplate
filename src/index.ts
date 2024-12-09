@@ -12,9 +12,7 @@ app.use(cors({credentials: true}));
 app.use(compression());
 app.use(bodyParser.json());
 
-const server = http.createServer(app);
-
-server.listen(8080, () => {
+app.listen(8080, () => {
     console.log("Server is running on port 8080");
     console.log("http://localhost:8080/")
-})
+});
